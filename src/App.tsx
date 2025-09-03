@@ -12,7 +12,6 @@ function App() {
 
   return (
     <div className='app'>
-      <header>Riddle Game Application</header>
       <Routes>
         <Route path='/' element={<HomePage />}/>
         <Route path='/login' element={<LoginPage />}/>
@@ -20,7 +19,6 @@ function App() {
         <Route path='/riddles' element={<RiddlesPage />}/>
         <Route path='/players' element={<ProfilePage />}/>
       </Routes>
-      <footer>&copy; 2025</footer>
     </div>
   )
 }

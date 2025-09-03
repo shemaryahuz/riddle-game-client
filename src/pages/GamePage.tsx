@@ -1,5 +1,5 @@
 
-import '../styles/Game.css'
+import '../styles/game.css'
 
 export default function GamePage() {
   return (

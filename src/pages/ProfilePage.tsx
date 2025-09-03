@@ -1,5 +1,5 @@
 
-import '../styles/PlayerDashboard.css'
+import '../styles/profile.css'
 
 export default function ProfilePage() {
   return (

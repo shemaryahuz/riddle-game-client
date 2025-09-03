@@ -1,5 +1,5 @@
 
-import '../styles/RiddlesDashboard.css'
+import '../styles/riddles.css'
 
 export default function RiddlesPage() {
   return (
