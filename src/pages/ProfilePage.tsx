@@ -1,10 +1,10 @@
 
 import '../styles/PlayerDashboard.css'
 
-export default function PlayerDashboard() {
+export default function ProfilePage() {
   return (
     <div>
-      Player Dashboard
+      ProfilePage
     </div>
   )
 }

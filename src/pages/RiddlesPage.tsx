@@ -1,10 +1,10 @@
 
 import '../styles/RiddlesDashboard.css'
 
-export default function RiddlesDashboard() {
+export default function RiddlesPage() {
   return (
     <div>
-      Riddles Dashboard
+      RiddlesPage
     </div>
   )
 }

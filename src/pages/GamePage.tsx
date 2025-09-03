@@ -1,7 +1,7 @@
 
 import '../styles/Game.css'
 
-export default function Game() {
+export default function GamePage() {
   return (
     <div>
       Game Page
