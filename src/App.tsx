@@ -1,11 +1,12 @@
 
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
-import LoginPage from './pages/LoginPage'
-import HomePage from './pages/HomePage'
+import LoginPage from './pages/public/LoginPage'
+import HomePage from './pages/public/HomePage'
 import GamePage from './pages/GamePage'
 import RiddlesPage from './pages/RiddlesPage'
 import ProfilePage from './pages/ProfilePage'
+import PlayerMenuPage from './pages/private/PlayerMenuPage'
 
 function App() {
 
@@ -16,8 +17,9 @@ function App() {
         <Route path='/' element={<HomePage />}/>
         <Route path='/login' element={<LoginPage />}/>
         <Route path='/game' element={<GamePage />}/>
+        <Route path='/player-menu' element={<PlayerMenuPage />}/>
         <Route path='/riddles' element={<RiddlesPage />}/>
-        <Route path='/players' element={<ProfilePage />}/>
+        <Route path='/profile' element={<ProfilePage />}/>
       </Routes>
     </div>
   )
