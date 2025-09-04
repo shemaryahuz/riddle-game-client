@@ -3,9 +3,9 @@ import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import LoginPage from './pages/public/LoginPage'
 import HomePage from './pages/public/HomePage'
-import GamePage from './pages/GamePage'
-import RiddlesPage from './pages/RiddlesPage'
-import ProfilePage from './pages/ProfilePage'
+import GamePage from './pages/public/GamePage'
+import RiddlesPage from './pages/private/RiddlesPage'
+import ProfilePage from './pages/private/ProfilePage'
 import PlayerMenuPage from './pages/private/PlayerMenuPage'
 
 function App() {

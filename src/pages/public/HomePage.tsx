@@ -1,6 +1,6 @@
 
 import '../../styles/home.css'
-import HomeMenu from '../../components/common/HomeMenu'
+import HomeMenu from '../../components/public/HomeMenu'
 
 export default function HomePage() {
   return (

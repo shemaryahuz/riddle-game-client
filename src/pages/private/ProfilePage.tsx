@@ -1,5 +1,5 @@
 
-import '../styles/profile.css'
+import '../../styles/profile.css'
 
 export default function ProfilePage() {
   return (
