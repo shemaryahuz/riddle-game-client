@@ -1,4 +1,4 @@
-.home-container {
+.home-page {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -8,14 +8,13 @@
     background: radial-gradient(whitesmoke, lightblue, blue );
 }
 
-.heading {
+.home-heading {
     font-size: 4rem;
     padding: 2rem;
     color: darkblue;
-    border-radius: 1rem;
 }
 
-.menu-container {
+.home-menu {
     min-width: 40vw;
     min-height: 40vh;
     display: flex;
@@ -24,7 +23,7 @@
     gap: 3rem;
 }
 
-.link button {
+.home-link button {
     border: none;
     background-color: blue;
     color: lightblue;
@@ -33,6 +32,6 @@
     border-radius: 1rem;
 }
 
-.link button:hover {
+.home-link button:hover {
     background-color: rgb(83, 83, 252);
 }
