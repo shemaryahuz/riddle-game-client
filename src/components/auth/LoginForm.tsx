@@ -5,35 +5,36 @@ import { useNavigate } from "react-router-dom";
 export default function LoginForm() {
   const [ user, setUser]  = useState({ username: '', password: '' });
   const [ toSignup, setToSignup ] = useState(false);
-  const [ message, setMessage ] = useState('');
+  const [ error, setError ] = useState('');
+  const [ success, setSuccess ] = useState(false);
   const navigate = useNavigate();
 
   const setUsername = (username: string) => {
-    setMessage('')
+    setError('')
     setUser((user) => ({ ...user, username: username }));
   }
 
   const setPassword = (password: string) => {
-    setMessage('')
+    setError('')
     setUser((user) => ({ ...user, password: password }));
   }
 
   const handleSubmit = async (event?: React.FormEvent) => {
     if (event) event.preventDefault();
     if (!user.username || !user.password) {
-        setMessage('Username and Password are required!');
+        setError('Username and Password are required!');
         return;
     }
     const result = toSignup ? await signup(user) : await login(user);
     if (result.error) {
-        setMessage(result.error)
+        setError(`${toSignup? 'Signup': 'Login'} Faild: ${result.error}`)
         return;
     }
-    setMessage(result.message);
-    navigate('/player-menu');
+    setSuccess(true);
   };
 
   return (
+    !success ? (
     <form onSubmit={handleSubmit}>
       <label htmlFor="username">Username</label>
       <input
@@ -54,9 +55,13 @@ export default function LoginForm() {
         onChange={(event) => setPassword(event.target.value)}
       />
 
-      { message && <p className="message">{message}</p> }
+      { error && <p className="message">{error}</p> }
 
-      <button type="submit" className="login-btn">
+      <button 
+        type="submit"
+        className="login-btn"
+        disabled={!!error}
+      >
         Login
       </button>
       <p>
@@ -64,6 +69,7 @@ export default function LoginForm() {
         <button 
             type="submit" 
             className="signup-btn" 
+            disabled={!!error}
             onClick={() => {
                 setToSignup(true);
                 handleSubmit();
@@ -72,6 +78,19 @@ export default function LoginForm() {
           Signup
         </button>
       </p>
-    </form>
-  )
+    </form> ) : (
+    <section className="success" >
+      <p className="success-message" >
+        You {toSignup ? 'Signed up': 'Logged in'} Successfully!
+      </p>
+      <button 
+        className="nav-menu-btn"
+        disabled={!success}
+        onClick={() => navigate("../player-menu")}
+      >
+        Go to Menu
+      </button>
+    </section>
+    )
+  );
 }

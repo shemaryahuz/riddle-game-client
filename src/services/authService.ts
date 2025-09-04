@@ -13,7 +13,7 @@ async function loginOrSignUp(user: User, method: string) {
             body: JSON.stringify(user),
             credentials: "include"
         };
-        const response = await fetch(`${authURL} /${method}`, requestOptions);
+        const response = await fetch(`${authURL}/${method}`, requestOptions);
         const responseObj = await response.json();
 
         if (response.status === 500) {
