@@ -1,37 +1,25 @@
 .home-page {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-
-    background: radial-gradient(whitesmoke, lightblue, blue );
+    gap: 2rem;
+    background: hsla(46, 100%, 50%, 0.564);
 }
 
-.home-heading {
-    font-size: 4rem;
-    padding: 2rem;
-    color: darkblue;
+.home-page h1 {
+    font-size: 3rem;
+    color: #000814;
 }
 
 .home-menu {
-    min-width: 40vw;
-    min-height: 40vh;
+    width: 30rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 3rem;
+    gap: 2rem;
 }
 
-.home-link button {
-    border: none;
-    background-color: blue;
-    color: lightblue;
-    font-size: 2rem;
-    padding: 2rem;
-    border-radius: 1rem;
-}
-
-.home-link button:hover {
-    background-color: rgb(83, 83, 252);
+.home-menu button {
+    width: 100%;
+    height: 5rem;
 }

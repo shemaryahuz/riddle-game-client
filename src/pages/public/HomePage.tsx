@@ -4,8 +4,8 @@ import HomeMenu from '../../components/public/HomeMenu'
 
 export default function HomePage() {
   return (
-    <main className='home-page'>
-      <h1 className='home-heading'>Welcome to the Riddle Game!</h1>
+    <main className='page home-page'>
+      <h1>Welcome to the Riddle Game!</h1>
       <HomeMenu />
     </main>
   )
