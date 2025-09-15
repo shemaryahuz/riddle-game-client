@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 export default function HomeMenu() {
   return (
     <section className="home-menu">
-      <p className="home-link">
+      <div className="home-link">
         <Link to={"/game"}>
           <button>Play as Guest</button>
         </Link>
-      </p>
+      </div>
 
       <div className="home-link">
         <Link to={"/login"}>
